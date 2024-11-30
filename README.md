@@ -33,6 +33,16 @@ Key Features:
 ## 00:00 Intro & demo
 ## 03:29 Project setup
 ## 09:25 Adding a component library
+- shadcn 설치
+```bash
+bunx --bun shadcn --version                   
+2.1.6
+bunx --bun shadcn@2.1.6 init
+```
+- shadcn/ui - button 컴포넌트 추가
+  - `bunx --bun shadcn@latest add button`
+
+
 ## 21:41 Customizing components
 ## 34:02 Resolving lint errors
 ## 39:12 Creating auth screens
