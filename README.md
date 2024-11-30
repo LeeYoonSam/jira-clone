@@ -44,6 +44,26 @@ bunx --bun shadcn@2.1.6 init
 
 
 ## 21:41 Customizing components
+- shadcn 컴포넌트 추가
+  - bunx --bun shadcn@latest add
+  ```bash
+  bunx --bun shadcn@latest add
+
+  ? Which components would you like to add? › Space to select. A to toggle all. Enter to submit. 
+  ◉ ↑ avatar
+  ◉   badge
+  ◯   breadcrumb
+  ◯   button
+  ◉   calendar
+  ◉   card
+  ◯   carousel
+  ◯   chart
+  ◯   checkbox
+  ◯ ↓ collapsible
+  ```
+  - add 명령을 입력하면 여러 컴포넌트를 선택해서 한번에 설치가능
+  
+
 ## 34:02 Resolving lint errors
 ## 39:12 Creating auth screens
 ## 01:34:17 Setting up Hono API
