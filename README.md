@@ -1,30 +1,32 @@
 # Jira Clone
 
 ⭐ Source code & more: https://dub.sh/twpYBjw
+
 🔥 Get $50 in Appwrite credits: https://apwr.dev/antonio50
+
 🎬 PART 2:    • Build a Jira Clone With Nextjs, React...  
 
 Hi all 👋 In this 16-hour tutorial split in two parts (my longest ever btw!) you will learn how to create an end-to-end fullstack Jira clone, all with workspaces, project / epics, tasks, kanban boards, calendars, editing and deleting tasks, invite system, role-based access control system, image uploads, analytics, authentication and more!
 
 Key Features:
-🏢 Workspaces
-📊 Projects / Epics
-✅ Tasks
-📋 Kanban Board View
-🗃️ Data Table View
-📅 Calendar View
-✉️ Invite System
-⚙️ Workspace and Project Settings
-🖼️ Image Uploads (for avatars and attachments)
-🔌 Appwrite SDK Integration
-⚛️ Next.js 14 Framework
-🎨 Shadcn UI & TailwindCSS Styling
-🔍 Advanced Search and Filtering
-📈 Analytics Dashboard
-👥 User Roles and Permissions
-🔒 Authentication (OAuth and Email)
-📱 Responsive Design (Mobile-friendly)
-🚀 API using Hono.js
+- 🏢 Workspaces
+- 📊 Projects / Epics
+- ✅ Tasks
+- 📋 Kanban Board View
+- 🗃️ Data Table View
+- 📅 Calendar View
+- ✉️ Invite System
+- ⚙️ Workspace and Project Settings
+- 🖼️ Image Uploads (for avatars and attachments)
+- 🔌 Appwrite SDK Integration
+- ⚛️ Next.js 14 Framework
+- 🎨 Shadcn UI & TailwindCSS Styling
+- 🔍 Advanced Search and Filtering
+- 📈 Analytics Dashboard
+- 👥 User Roles and Permissions
+- 🔒 Authentication (OAuth and Email)
+- 📱 Responsive Design (Mobile-friendly)
+- 🚀 API using Hono.js
 
 # 📺 Build a Jira Clone With Nextjs, React, Tailwind, Hono.js | Part 1/2 (2024)
 
