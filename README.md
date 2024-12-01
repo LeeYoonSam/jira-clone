@@ -62,9 +62,14 @@ bunx --bun shadcn@2.1.6 init
   ◯ ↓ collapsible
   ```
   - add 명령을 입력하면 여러 컴포넌트를 선택해서 한번에 설치가능
-  
+
 
 ## 34:02 Resolving lint errors
+- `.eslintrc.json` 파일 수정
+  - 규칙 추가
+- shadcn-ui 컴포넌트 빌드 에러 수정
+
+
 ## 39:12 Creating auth screens
 ## 01:34:17 Setting up Hono API
 ## 01:48:11 Creating auth API
