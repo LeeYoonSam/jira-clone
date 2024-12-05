@@ -71,6 +71,31 @@ bunx --bun shadcn@2.1.6 init
 
 
 ## 39:12 Creating auth screens
+- `src/app/layout.tsx` 수정
+  - 전체 폰트 변경
+- `public/logo.svg` 로고 추가
+- `src/app/(auth)/layout.tsx` 생성
+  - 인증 페이지 레이아웃
+  - 네비게이션 바 추가
+    - 로그인, 회원가입 경로에 따라 버튼 변경
+- `src/app/(auth)/sign-in/page.tsx` 생성
+  - 로그인 페이지
+  - 로그인 카드 폼 추가
+- `src/app/(auth)/sign-up/page.tsx` 생성
+  - 회원가입 페이지
+  - 회원가입 카드 폼 추가
+- `src/components/dotted-separator.tsx` 생성
+  - 점선 컴포넌트
+- `react-icons` 추가
+  - `bun add react-icons`
+- `src/features/auth/components/sign-in-card.tsx` 생성
+  - 로그인 카드 컴포넌트
+  - form, useForm, zod 적용
+- `src/features/auth/components/sign-up-card.tsx` 생성
+  - 회원가입 카드 컴포넌트
+  - form, useForm, zod 적용
+
+
 ## 01:34:17 Setting up Hono API
 ## 01:48:11 Creating auth API
 ## 02:21:49 Setting up Appwrite & database
