@@ -97,6 +97,24 @@ bunx --bun shadcn@2.1.6 init
 
 
 ## 01:34:17 Setting up Hono API
+- [Vercel - Hono](https://hono.dev/docs/getting-started/vercel#vercel)
+- `bun add hono` 디펜던시 추가
+- `src/app/api/[[...route]]/route.ts` 생성
+  - 샘플코드 작성
+
+### Note
+```ts
+app.get("/project/:projectId", (c) => {
+  const { projectId } = c.req.param();
+  
+  return c.json({ project: projectId });
+});
+
+const { projectId } = c.req.param();
+```
+- 구조체를 사용해서 파라미터를 가져오면 path가 변경되면 에러를 발생시켜서 안전하게 사용할 수 있다.
+
+
 ## 01:48:11 Creating auth API
 ## 02:21:49 Setting up Appwrite & database
 ## 02:51:10 Building a session middleware
