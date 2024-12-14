@@ -116,6 +116,33 @@ const { projectId } = c.req.param();
 
 
 ## 01:48:11 Creating auth API
+- `bun add @tanstack/react-query` 디펜던시 추가
+  - 비동기 상태 관리를 위한 라이브러리
+  - [TanStack Query](https://tanstack.com/query/latest)는 항상 최신 상태로 유지되는 선언적 자동 관리 쿼리와 변형을 제공하여 개발자와 사용자 환경을 직접적으로 개선합니다.
+- `src/components/query-provider.tsx` 생성
+  - [ReactQuery](https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr#advanced-server-rendering) QueryProvider 컴포넌트
+- `src/app/layout.tsx` 수정
+  - QueryProvider 컴포넌트 추가
+- `src/features/auth/server/route.ts` 생성
+  - `bun add @hono/zod-validator` 디펜던시 추가
+  - auth 관련  API 추가
+- `.env.local` 파일 생성
+  - 기본 APP URL 설정
+- `src/lib/rpc.ts` 생성
+  - Hono Client 설정
+  - Hono Client 타입 지정 
+- `src/features/auth/schemas.ts` 생성
+  - login, register 스키마 추가
+  - 컴포넌트, API 에서 같은 zod 를 사용하도록 설정
+- src/features/auth/api/use-login.ts 생성  
+  - login POST API 추가
+- src/features/auth/api/use-register.ts 생성  
+  - register POST API 추가
+- src/app/api/[[...route]]/route.ts 수정
+  - Hono 설정
+  - src/features/auth/server/route.ts 에 auth route 추가
+
+
 ## 02:21:49 Setting up Appwrite & database
 ## 02:51:10 Building a session middleware
 ## 03:12:58 Learning how to protect routes
