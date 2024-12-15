@@ -161,8 +161,29 @@ const { projectId } = c.req.param();
 - `src/features/auth/constants.ts` 생성
   - AUTH_COOKIE 상수 추가
 
-
 ## 02:51:10 Building a session middleware
+- `src/lib/session-middleware.ts` 생성
+  - 세션 미들웨어 추가
+  - appwrite 설정 및 Unauthorized 에러 처리
+  - 미들웨어에서 타입 추론을위해 AdditionalContext 추가
+- `src/features/auth/server/route.ts` 수정
+  - logout 시 session, cookie 삭제
+  - current API 추가
+- `src/features/auth/api/use-current.ts` 생성
+  - 현재 사용자 조회 훅 정의
+- `src/features/auth/api/use-logout.ts` 생성
+  - 로그아웃 훅 정의
+
+### NOTE
+API 훅
+- 재사용, API 요청과 응답 상태 관리
+- 비동기 프로세스를 처리하기 위해 React Query 의 useMutation 훅 사용
+
+예시
+- [useLogin](./src/features/auth/api/use-login.ts)
+- [useRegister](./src/features/auth/api/use-logout.ts)
+
+
 ## 03:12:58 Learning how to protect routes
 ## 03:45:28 Building a dashboard layout
 ## 04:07:02 Building a workspace form 
