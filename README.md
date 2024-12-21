@@ -185,6 +185,19 @@ API 훅
 
 
 ## 03:12:58 Learning how to protect routes
+- `src/features/auth/components/user-button.tsx` 생성
+  - 사용자 정보 컴포넌트
+  - 로그아웃 기능 추가
+- `src/app/page.tsx` 수정
+  - 사용자 정보 컴포넌트 추가
+  - 리다이렉트 적용
+- `src/features/auth/action.ts` 생성
+  - appwrite 설정 및 session 정보로 유저 정보 가져오기
+- `src/app/(auth)/sign-in/page.tsx` 수정
+- `src/app/(auth)/sign-up/page.tsx` 수정
+  - 리다이렉트 적용
+
+
 ## 03:45:28 Building a dashboard layout
 ## 04:07:02 Building a workspace form 
 ## 04:37:36 Handling image upload
