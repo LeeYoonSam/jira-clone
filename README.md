@@ -216,6 +216,35 @@ API 훅
 
 
 ## 04:07:02 Building a workspace form 
+- `appwrite` Database 생성
+  - Database 생성
+  - Collection 생성
+  - Attributes 생성
+- `.env.local` 수정
+  - Database ID 설정
+- `src/config.ts` 생성
+  - env id 상수 설정
+- `src/features/workspaces/schemas.ts` 생성
+  - workspace 스키마 정의
+- `src/features/workspaces/server/route.ts` 생성
+  - workspace 생성 API 추가
+- `src/app/api/[[...route]]/route.ts` 수정
+  - workspace route 추가
+- `src/features/workspaces/api/use-create-workspace.ts` 생성
+  - workspace 생성 API 훅 추가
+  - mutation 추가
+- `src/features/workspaces/components/create-workspace-form.tsx` 생성
+  - workspace 생성 폼 컴포넌트
+- `src/app/(dashboard)/page.tsx` 수정
+  - workspace 폼 컴포넌트 추가
+- `src/app/layout.tsx` 수정
+  - sonner Toaster 추가
+- `src/features/auth/api mutation hook들` 수정
+  - login, logout, register 훅 수정
+  - 훅 내부 에러 핸들링 추가
+  - 토스트 메시지 추가
+
+
 ## 04:37:36 Handling image upload
 ## 05:04:37 Creating a workspace switcher
 ## 05:22:36 Creating workspace members
