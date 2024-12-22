@@ -199,6 +199,22 @@ API 훅
 
 
 ## 03:45:28 Building a dashboard layout
+- `src/app/(dashboard)/page.tsx` 수정
+  - src/app/page.tsx -> 이동
+- `src/app/(dashboard)/layout.tsx` 생성
+  - 대시보드 레이아웃 추가
+- `src/components/sidebar.tsx` 생성
+  - 사이드바 컴포넌트
+  - 메뉴, 태스크, 설정, 멤버 메뉴 추가
+- `src/components/navigation.tsx` 생성
+  - 사이드바 메뉴 컴포넌트
+  - Route 정보 설정(이름, 아이콘, 경로 등)
+- `src/components/navbar.tsx` 생성
+  - 상단 네비게이션 바 컴포넌트
+- `src/components/mobile-sidebar.tsx` 생성
+  - 모바일용 사이드바 컴포넌트
+
+
 ## 04:07:02 Building a workspace form 
 ## 04:37:36 Handling image upload
 ## 05:04:37 Creating a workspace switcher
