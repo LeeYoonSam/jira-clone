@@ -246,6 +246,17 @@ API 훅
 
 
 ## 04:37:36 Handling image upload
+- src/features/workspaces/schemas.ts 수정
+  - 이미지 추가
+- AppWrite 대시보드 설정
+  - Storage 생성 및 권한 설정
+  - Database > workspace > atttribute > imageUrl 추가
+- .env.local 수정
+  - Storage ID 설정
+- src/features/workspaces/server/route.ts 수정
+  - appwrite storage 이미지 업로드 및 url 가져와서 workspace 생성
+
+
 ## 05:04:37 Creating a workspace switcher
 ## 05:22:36 Creating workspace members
 ## 05:38:45 Building a responsive modal
