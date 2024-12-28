@@ -258,6 +258,20 @@ API 훅
 
 
 ## 05:04:37 Creating a workspace switcher
+- src/features/workspaces/server/route.ts 수정
+  - workspace 조회 API 추가
+- src/features/workspaces/api/use-get-workspaces.ts 생성
+  - workspace 조회
+- src/components/sidebar.tsx 수정
+  - Workspace Switcher 메뉴 추가
+- src/components/workspace-switcher.tsx 생성
+  - Workspace Switcher 컴포넌트
+  - Select 컴포넌트를 사용해서 워크스페이스 리스트 추가
+  - Avatar 컴포넌트 사용
+- src/features/workspaces/components/workspace-avatar.tsx 생성
+  - Workspace Avatar 컴포넌트
+
+
 ## 05:22:36 Creating workspace members
 ## 05:38:45 Building a responsive modal
 ## 06:11:44 Building a standalone layout

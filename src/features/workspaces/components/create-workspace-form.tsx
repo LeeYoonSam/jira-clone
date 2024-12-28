@@ -42,6 +42,7 @@ export const CreateWorkspaceForm = ({
     mutate({ form: finalValues }, {
       onSuccess: () => {
         form.reset();
+        // TODO: Redirect to new workspace
       }
     });
   };
