@@ -246,33 +246,57 @@ API 훅
 
 
 ## 04:37:36 Handling image upload
-- src/features/workspaces/schemas.ts 수정
+- `src/features/workspaces/schemas.ts` 수정
   - 이미지 추가
 - AppWrite 대시보드 설정
   - Storage 생성 및 권한 설정
   - Database > workspace > atttribute > imageUrl 추가
-- .env.local 수정
+- `.env.local` 수정
   - Storage ID 설정
-- src/features/workspaces/server/route.ts 수정
+- `src/features/workspaces/server/route.ts` 수정
   - appwrite storage 이미지 업로드 및 url 가져와서 workspace 생성
 
 
 ## 05:04:37 Creating a workspace switcher
-- src/features/workspaces/server/route.ts 수정
+- `src/features/workspaces/server/route.ts` 수정
   - workspace 조회 API 추가
-- src/features/workspaces/api/use-get-workspaces.ts 생성
+- `src/features/workspaces/api/use-get-workspaces.ts` 생성
   - workspace 조회
-- src/components/sidebar.tsx 수정
+- `src/components/sidebar.tsx` 수정
   - Workspace Switcher 메뉴 추가
-- src/components/workspace-switcher.tsx 생성
+- `src/components/workspace-switcher.tsx` 생성
   - Workspace Switcher 컴포넌트
   - Select 컴포넌트를 사용해서 워크스페이스 리스트 추가
   - Avatar 컴포넌트 사용
-- src/features/workspaces/components/workspace-avatar.tsx 생성
+- `src/features/workspaces/components/workspace-avatar.tsx` 생성
   - Workspace Avatar 컴포넌트
 
 
 ## 05:22:36 Creating workspace members
+- AppWrite Database 추가
+  - members collection 생성
+    - attributes : userId, workspaceId, role
+    - settings: all user - create, read, update, delete
+- `.env.local` 수정
+  - members collection id 추가
+- `src/config.ts` 수정
+  - members collection id 추가
+- `src/features/workspaces/server/route.ts` 수정
+  - **post:** workspace 생성시 members 에 userId, workspaceId, role 추가
+  - **get:** workspace 조회시 members 조회, 정렬 후 해당하는 workspace 반환
+- `src/features/members/types.ts` 생성
+  - member role 타입 정의
+- `src/features/auth/api/use-logout.ts` 수정
+  - logout 시 workspace 관련 쿼리 무효화 처리
+- AppWrite Database 수정
+  - worksapce collection 수정
+    - attributes 추가: inviteCode
+- `src/lib/utils.ts` 수정
+  - inviteCode 생성 함수 추가
+- `src/features/workspaces/server/route.ts` 수정
+  - workspace 생성시 inviteCode 추가
+
+
 ## 05:38:45 Building a responsive modal
 ## 06:11:44 Building a standalone layout
 ## 06:22:51 Building workspace settings
