@@ -101,7 +101,7 @@ export const SignUpCard = () => {
                   <FormControl>
                     <Input
                       {...field}
-                      type="text"
+                      type="password"
                       placeholder="Enter your password"
                     />
                   </FormControl>

@@ -325,6 +325,17 @@ API 훅
 
 
 ## 06:11:44 Building a standalone layout
+- `src/features/workspaces/components/create-workspace-form.tsx` 수정
+  - 워크스페이스 생성 폼 컴포넌트 수정
+  - 조건에 따라 cancel 버튼 가시성 처리
+- `src/app/(dashboard)/workspaces/[workspaceId]/page.tsx` 수정
+  - 비로그인 유저 리다이렉트 처리
+- `src/app/(standalone)/layout.tsx` 생성
+  - standalone 레이아웃 추가
+- `src/app/(standalone)/workspaces/create/page.tsx` 생성
+  - standalone 워크스페이스 생성 페이지 추가
+
+
 ## 06:22:51 Building workspace settings
 ## 07:02:38 Refactoring server queries
 ## 07:12:03 Adding a "delete" functionality
