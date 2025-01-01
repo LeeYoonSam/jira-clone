@@ -298,6 +298,32 @@ API 훅
 
 
 ## 05:38:45 Building a responsive modal
+- `src/app/(dashboard)/workspaces/[workspaceId]/page.tsx` 생성
+  - 워크스페이스 페이지
+- `src/components/workspace-switcher.tsx` 수정
+  - select 선택시 workspaces path 로 이동 처리
+- `src/features/workspaces/hooks/use-workspace-id.ts` 생성
+  - workspaceId 훅 추가
+- `src/features/workspaces/action.ts` 수정
+  - 데이터베이스에서 workspaces 리스트 조회
+- `src/app/(dashboard)/page.tsx` 수정
+  - 워크스페이스 갯수에 따라 리다이렉트 처리
+- `src/app/(dashboard)/loading.tsx` 생성
+  - 대시보드 로딩 페이지 추가
+- `src/components/responsive-modal.tsx` 생성
+  - `bun add react-use` 디펜던시 추가
+  - useMedia 로 디바이스 크기 확인
+  - 화면 크기에 맞게 다이얼로그, 드로어 표시
+- `src/features/workspaces/components/create-workspace-modal.tsx` 생성  
+  - 워크스페이스 생성 모달 컴포넌트
+- `src/app/(dashboard)/layout.tsx` 수정
+  - 워크스페이스 생성 모달 컴포넌트 추가
+- `src/features/workspaces/hooks/use-create-workspace-modal.ts` 생성
+  - 워크스페이스 생성 모달 상태 훅 추가
+  - `bun add nuqs@1.19.1` 디펜던시 추가
+    - React용 타입 안전 검색 매개변수 상태 관리자
+
+
 ## 06:11:44 Building a standalone layout
 ## 06:22:51 Building workspace settings
 ## 07:02:38 Refactoring server queries
