@@ -356,7 +356,22 @@ API 훅
 - `src/app/api/[[...route]]/route.ts` 수정
   - PATCH 메서드 추가
 
+
 ## 07:02:38 Refactoring server queries
+- `src/features/auth/actions.ts -> src/features/auth/queries.ts` 이름 변경
+  - 사용중인 소스코드 import 수정
+  - createSessionClient 사용해서 리팩토링
+- `src/lib/appwrite.ts` 수정
+  - createSessionClient 함수 추가
+    - appwrite client 설정
+      - 쿠키에서 session 가져와서 appwrite session 설정
+      - Account, Database 리턴
+- src/features/workspaces/actions.ts -> src/features/workspaces/queries.ts 이름 변경
+  - 사용중인 소스코드 import 수정
+  - createSessionClient 사용해서 리팩토링
+
+  
+
 ## 07:12:03 Adding a "delete" functionality
 ## 07:35:03 Adding a "reset invite" functionality
 ## 07:47:03 Building the invite system

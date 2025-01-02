@@ -1,5 +1,5 @@
-import { getCurrent } from "@/features/auth/action";
-import { getWorksapces } from "@/features/workspaces/action";
+import { getCurrent } from "@/features/auth/queries";
+import { getWorksapces } from "@/features/workspaces/queries";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
