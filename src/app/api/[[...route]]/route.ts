@@ -13,5 +13,6 @@ const routes = app
 // HTTP Method 타입을 지원하기 위해 꼭 추가해야함
 export const GET = handle(app);
 export const POST = handle(app);
+export const PATCH = handle(app);
 
 export type AppType = typeof routes;

@@ -337,6 +337,25 @@ API 훅
 
 
 ## 06:22:51 Building workspace settings
+- `src/features/workspaces/schemas.ts` 수정
+  - updateWorkspaceSchema 스키마 추가
+- `src/features/members/utils.ts` 생성
+  - getMember 함수 추가
+- `src/features/workspaces/server/route.ts` 수정
+  - workspace 업데이트 API 추가
+- `src/features/workspaces/api/use-update-workspace.ts` 생성
+  - workspace 업데이트 API 훅 추가
+- `src/features/workspaces/types.ts` 생성
+  - workspace 타입 정의
+- `src/app/(standalone)/workspaces/[workspaceId]/settings/page.tsx` 생성
+  - 워크스페이스 설정 페이지 추가
+- `src/features/workspaces/components/edit-workspace-form.tsx` 생성
+  - 워크스페이스 정보 업데이트 컴포넌트
+- `src/features/workspaces/action.ts` 수정
+  - workspace 조회
+- `src/app/api/[[...route]]/route.ts` 수정
+  - PATCH 메서드 추가
+
 ## 07:02:38 Refactoring server queries
 ## 07:12:03 Adding a "delete" functionality
 ## 07:35:03 Adding a "reset invite" functionality
