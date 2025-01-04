@@ -366,13 +366,23 @@ API 훅
     - appwrite client 설정
       - 쿠키에서 session 가져와서 appwrite session 설정
       - Account, Database 리턴
-- src/features/workspaces/actions.ts -> src/features/workspaces/queries.ts 이름 변경
+- `src/features/workspaces/actions.ts -> src/features/workspaces/queries.ts` 이름 변경
   - 사용중인 소스코드 import 수정
   - createSessionClient 사용해서 리팩토링
 
   
-
 ## 07:12:03 Adding a "delete" functionality
+- `src/features/workspaces/server/route.ts` 수정
+  - workspace 삭제 API 추가
+-`src/features/workspaces/api/use-delete-workspace.ts` 생성
+  - workspace 삭제 API 훅 추가
+- `src/hooks/use-confirm.tsx` 생성
+  - 공통 다이얼로그용 훅
+- `src/features/workspaces/components/edit-workspace-form.tsx` 수정
+  - 워크스페이스 삭제 컴포넌트 추가
+- `src/app/api/[[...route]]/route.ts` delete 메서드 추가
+
+
 ## 07:35:03 Adding a "reset invite" functionality
 ## 07:47:03 Building the invite system
 ## 08:10:05 Adding a "delete" functionality
