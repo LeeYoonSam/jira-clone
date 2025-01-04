@@ -384,6 +384,16 @@ API 훅
 
 
 ## 07:35:03 Adding a "reset invite" functionality
+- `src/features/workspaces/server/route.ts` 수정
+  - workspace 초대코드 재설정 API 추가
+- `src/features/workspaces/api/use-reset-invite-code.ts` 생성
+  - useResetInviteCode 커스텀 훅 정의
+  - react-query의 useMutation을 사용하여 워크스페이스의 초대 코드를 재설정하는 API 요청을 처리
+  - 성공시 성공 메시지를 표시하고 관련 쿼리를 무효화하여 데이터를 갱신, 실패시 오류 메시지를 표시
+- `src/features/workspaces/components/edit-workspace-form.tsx` 수정
+  - 워크스페이스 초대코드 재설정 컴포넌트 추가
+  
+
 ## 07:47:03 Building the invite system
 ## 08:10:05 Adding a "delete" functionality
 
