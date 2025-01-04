@@ -395,6 +395,22 @@ API 훅
   
 
 ## 07:47:03 Building the invite system
+- `src/features/workspaces/server/route.ts` 수정
+  - workspace 참가 API 추가
+- `src/features/workspaces/queries.ts` 수정
+  - 데이터베이스에서 workspace 정보 조회 쿼리 추가
+- `src/features/workspaces/api/use-join-workspace.ts` 생성
+  - 워크스페이스 초대코드 훅 정의
+  - react-query의 useMutation을 사용하여 워크스페이스에 참가하는 API 요청을 처리
+- `src/features/workspaces/hooks/use-invite-code.ts` 생성
+  - 워크스페이스 초대코드 훅 정의
+- `src/features/workspaces/components/join-workspace-form.tsx` 생성
+  - 워크스페이스 참가 폼 컴포넌트 추가
+- `src/app/(standalone)/workspaces/[workspaceId]/join/[inviteCode]/page.tsx` 생성
+  - 워크스페이스 참가 페이지 추가
+  - 워크스페이스 정보를 가져와서 참가 폼에 전달
+
+
 ## 08:10:05 Adding a "delete" functionality
 
 # 📺 Build a Jira Clone With Nextjs, React, Tailwind, Hono.js | Part 2/2 (2024)
