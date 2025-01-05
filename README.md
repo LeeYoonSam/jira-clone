@@ -411,7 +411,29 @@ API 훅
   - 워크스페이스 정보를 가져와서 참가 폼에 전달
 
 
-## 08:10:05 Adding a "delete" functionality
+## 08:10:05 Adding a "member" functionality
+- `src/features/members/server/route.ts` 수정
+  - 멤버 get, delete, patch API 추가
+- `src/app/api/[[...route]]/route.ts` 수정
+  - Member Route 추가
+- `src/lib/appwrite.ts` 수정
+  - createAdminClient 에 Users 추가
+- `src/features/members/api/use-delete-member.ts` 생성
+  - 멤버 삭제 훅 정의
+  - react-query의 useMutation을 사용하여 멤버 삭제 API 요청 처리
+- `src/features/members/api/use-get-members.ts` 생성
+  - 멤버 조회 훅 정의
+  - react-query의 useMutation을 사용하여 멤버 조회 API 요청 처리
+- `src/features/members/api/use-update-member.ts` 생성
+  - 멤버 업데이트 훅 정의
+  - react-query의 useMutation을 사용하여 멤버 업데이트 API 요청 처리
+- `src/features/members/components/member-avatar.tsx` 생성
+  - 멤버 아바타 컴포넌트 추가
+- `src/features/members/components/members-list.tsx` 생성
+  - 멤버 리스트 컴포넌트 추가
+- `src/app/(standalone)/workspaces/[workspaceId]/members/page.tsx` 생성
+  - 멤버 페이지 추가
+
 
 # 📺 Build a Jira Clone With Nextjs, React, Tailwind, Hono.js | Part 2/2 (2024)
 ...
