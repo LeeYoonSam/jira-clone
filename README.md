@@ -30,9 +30,9 @@ Key Features:
 
 # 📺 Build a Jira Clone With Nextjs, React, Tailwind, Hono.js | Part 1/2 (2024)
 
-## 00:00 Intro & demo
-## 03:29 Project setup
-## 09:25 Adding a component library
+## Intro & demo
+## Project setup
+## Adding a component library
 - shadcn 설치
 ```bash
 bunx --bun shadcn --version                   
@@ -43,7 +43,7 @@ bunx --bun shadcn@2.1.6 init
   - `bunx --bun shadcn@latest add button`
 
 
-## 21:41 Customizing components
+## Customizing components
 - shadcn 컴포넌트 추가
   - bunx --bun shadcn@latest add
   ```bash
@@ -64,13 +64,13 @@ bunx --bun shadcn@2.1.6 init
   - add 명령을 입력하면 여러 컴포넌트를 선택해서 한번에 설치가능
 
 
-## 34:02 Resolving lint errors
+## Resolving lint errors
 - `.eslintrc.json` 파일 수정
   - 규칙 추가
 - shadcn-ui 컴포넌트 빌드 에러 수정
 
 
-## 39:12 Creating auth screens
+## Creating auth screens
 - `src/app/layout.tsx` 수정
   - 전체 폰트 변경
 - `public/logo.svg` 로고 추가
@@ -96,7 +96,7 @@ bunx --bun shadcn@2.1.6 init
   - form, useForm, zod 적용
 
 
-## 01:34:17 Setting up Hono API
+## Setting up Hono API
 - [Vercel - Hono](https://hono.dev/docs/getting-started/vercel#vercel)
 - `bun add hono` 디펜던시 추가
 - `src/app/api/[[...route]]/route.ts` 생성
@@ -115,7 +115,7 @@ const { projectId } = c.req.param();
 - 구조체를 사용해서 파라미터를 가져오면 path가 변경되면 에러를 발생시켜서 안전하게 사용할 수 있다.
 
 
-## 01:48:11 Creating auth API
+## Creating auth API
 - `bun add @tanstack/react-query` 디펜던시 추가
   - 비동기 상태 관리를 위한 라이브러리
   - [TanStack Query](https://tanstack.com/query/latest)는 항상 최신 상태로 유지되는 선언적 자동 관리 쿼리와 변형을 제공하여 개발자와 사용자 환경을 직접적으로 개선합니다.
@@ -143,7 +143,7 @@ const { projectId } = c.req.param();
   - src/features/auth/server/route.ts 에 auth route 추가
 
 
-## 02:21:49 Setting up Appwrite & database
+## Setting up Appwrite & database
 - `Appwrite 설정`
   - 디펜던시 추가
     - `bun add node-appwrite`
@@ -161,7 +161,7 @@ const { projectId } = c.req.param();
 - `src/features/auth/constants.ts` 생성
   - AUTH_COOKIE 상수 추가
 
-## 02:51:10 Building a session middleware
+## Building a session middleware
 - `src/lib/session-middleware.ts` 생성
   - 세션 미들웨어 추가
   - appwrite 설정 및 Unauthorized 에러 처리
@@ -184,7 +184,7 @@ API 훅
 - [useRegister](./src/features/auth/api/use-logout.ts)
 
 
-## 03:12:58 Learning how to protect routes
+## Learning how to protect routes
 - `src/features/auth/components/user-button.tsx` 생성
   - 사용자 정보 컴포넌트
   - 로그아웃 기능 추가
@@ -198,7 +198,7 @@ API 훅
   - 리다이렉트 적용
 
 
-## 03:45:28 Building a dashboard layout
+## Building a dashboard layout
 - `src/app/(dashboard)/page.tsx` 수정
   - src/app/page.tsx -> 이동
 - `src/app/(dashboard)/layout.tsx` 생성
@@ -215,7 +215,7 @@ API 훅
   - 모바일용 사이드바 컴포넌트
 
 
-## 04:07:02 Building a workspace form 
+## Building a workspace form 
 - `appwrite` Database 생성
   - Database 생성
   - Collection 생성
@@ -245,7 +245,7 @@ API 훅
   - 토스트 메시지 추가
 
 
-## 04:37:36 Handling image upload
+## Handling image upload
 - `src/features/workspaces/schemas.ts` 수정
   - 이미지 추가
 - AppWrite 대시보드 설정
@@ -257,7 +257,7 @@ API 훅
   - appwrite storage 이미지 업로드 및 url 가져와서 workspace 생성
 
 
-## 05:04:37 Creating a workspace switcher
+## Creating a workspace switcher
 - `src/features/workspaces/server/route.ts` 수정
   - workspace 조회 API 추가
 - `src/features/workspaces/api/use-get-workspaces.ts` 생성
@@ -272,7 +272,7 @@ API 훅
   - Workspace Avatar 컴포넌트
 
 
-## 05:22:36 Creating workspace members
+## Creating workspace members
 - AppWrite Database 추가
   - members collection 생성
     - attributes : userId, workspaceId, role
@@ -297,7 +297,7 @@ API 훅
   - workspace 생성시 inviteCode 추가
 
 
-## 05:38:45 Building a responsive modal
+## Building a responsive modal
 - `src/app/(dashboard)/workspaces/[workspaceId]/page.tsx` 생성
   - 워크스페이스 페이지
 - `src/components/workspace-switcher.tsx` 수정
@@ -324,7 +324,7 @@ API 훅
     - React용 타입 안전 검색 매개변수 상태 관리자
 
 
-## 06:11:44 Building a standalone layout
+## Building a standalone layout
 - `src/features/workspaces/components/create-workspace-form.tsx` 수정
   - 워크스페이스 생성 폼 컴포넌트 수정
   - 조건에 따라 cancel 버튼 가시성 처리
@@ -336,7 +336,7 @@ API 훅
   - standalone 워크스페이스 생성 페이지 추가
 
 
-## 06:22:51 Building workspace settings
+## Building workspace settings
 - `src/features/workspaces/schemas.ts` 수정
   - updateWorkspaceSchema 스키마 추가
 - `src/features/members/utils.ts` 생성
@@ -357,7 +357,7 @@ API 훅
   - PATCH 메서드 추가
 
 
-## 07:02:38 Refactoring server queries
+## Refactoring server queries
 - `src/features/auth/actions.ts -> src/features/auth/queries.ts` 이름 변경
   - 사용중인 소스코드 import 수정
   - createSessionClient 사용해서 리팩토링
@@ -371,7 +371,7 @@ API 훅
   - createSessionClient 사용해서 리팩토링
 
   
-## 07:12:03 Adding a "delete" functionality
+## Adding a "delete" functionality
 - `src/features/workspaces/server/route.ts` 수정
   - workspace 삭제 API 추가
 -`src/features/workspaces/api/use-delete-workspace.ts` 생성
@@ -383,7 +383,7 @@ API 훅
 - `src/app/api/[[...route]]/route.ts` delete 메서드 추가
 
 
-## 07:35:03 Adding a "reset invite" functionality
+## Adding a "reset invite" functionality
 - `src/features/workspaces/server/route.ts` 수정
   - workspace 초대코드 재설정 API 추가
 - `src/features/workspaces/api/use-reset-invite-code.ts` 생성
@@ -394,7 +394,7 @@ API 훅
   - 워크스페이스 초대코드 재설정 컴포넌트 추가
   
 
-## 07:47:03 Building the invite system
+## Building the invite system
 - `src/features/workspaces/server/route.ts` 수정
   - workspace 참가 API 추가
 - `src/features/workspaces/queries.ts` 수정
@@ -411,7 +411,7 @@ API 훅
   - 워크스페이스 정보를 가져와서 참가 폼에 전달
 
 
-## 08:10:05 Adding a "member" functionality
+## Adding a "member" functionality
 - `src/features/members/server/route.ts` 수정
   - 멤버 get, delete, patch API 추가
 - `src/app/api/[[...route]]/route.ts` 수정
@@ -434,6 +434,30 @@ API 훅
 - `src/app/(standalone)/workspaces/[workspaceId]/members/page.tsx` 생성
   - 멤버 페이지 추가
 
+### Note
+**new Users(client) 로 유저 정보를 가져올때 401(general_unauthorized_scope) 에러 발생**
+- Appwrite 대시보드 > 프로젝트 > API Keys 선택 > Scopes > Auth - users.read 추가
+
 
 # 📺 Build a Jira Clone With Nextjs, React, Tailwind, Hono.js | Part 2/2 (2024)
-...
+
+## Adding workspace projects
+
+
+## Building project settings
+## Building a tasks API
+## Building a task form
+## Building data filters
+## Building a data table
+## Adding task settings
+## Building a data kanban
+## Adding a kanban update API
+## Building a data calendar
+## Adding a task page
+## Refactoring server components 
+## Building project analytics
+## Building workspace analytics
+## Resolving build errors
+## Implementing OAuth login
+## Deployment
+## Resolving leftover bugs
