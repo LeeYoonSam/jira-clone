@@ -9,7 +9,6 @@ import { generateInviteCode } from "@/lib/utils";
 import { getMember } from "@/features/members/utils";
 import { z } from "zod";
 import { Workspace } from "../types";
-import { json } from "stream/consumers";
 
 const app = new Hono()
   .get("/", sessionMiddleware, async (c) => {

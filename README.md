@@ -442,6 +442,32 @@ API 훅
 # 📺 Build a Jira Clone With Nextjs, React, Tailwind, Hono.js | Part 2/2 (2024)
 
 ## Adding workspace projects
+- `.env.local` 수정
+  - PROJECT_ID 추가
+- `src/config.ts` 수정
+  - PROJECT_ID 상수 추가
+- `src/features/projects/server/route.ts` 생성
+  - project 생성 API 추가
+- `src/app/api/[[...route]]/route.ts` 수정
+  - project route 추가
+- `src/features/projects/schemas.ts` 생성
+  - project 스키마 추가
+- `src/features/projects/api/use-create-project.ts` 생성
+  - 프로젝트 생성 훅 정의
+  - react-query의 useMutation을 사용하여 프로젝트 생성 API 요청 처리
+- `src/features/projects/api/use-get-projects.ts` 생성
+  - 프로젝트 조회 훅 정의
+  - react-query의 useMutation을 사용하여 프로젝트 조회 API 요청 처리
+- `src/components/sidebar.tsx` 수정
+  - 프로젝트 메뉴 추가
+- `src/components/projects.tsx` 생성
+  - 프로젝트 리스트 컴포넌트 추가
+- `src/features/projects/hooks/use-create-project-modal.ts` 생성  
+  - 프로젝트 생성 모달 훅 추가
+- `src/features/projects/components/project-avatar.tsx` 생성
+  - 프로젝트 아바타 컴포넌트 추가
+- `src/features/workspaces/components/workspace-avatar.tsx` 수정
+  - 이미지 라운드 수정
 
 
 ## Building project settings
