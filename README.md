@@ -471,7 +471,50 @@ API 훅
 
 
 ## Building project settings
+- `src/features/projects/queries.ts` 생성
+  - 디비에서 프로젝트 정보 가져오기
+- `src/features/projects/types.ts` 생성
+  - Project 타입 추가
+- `src/app/(dashboard)/workspaces/[workspaceId]/projects/[projectId]/page.tsx` 수정
+  - 프로젝트 페이지
+- `src/app/(standalone)/error.tsx` 생성
+  - 글로벌 에러 페이지
+- `src/app/(standalone)/loading.tsx` 생성
+  - 글로벌 로딩 페이지
+- `src/app/(auth)` error, loading 추가
+- `src/app/(standalone)` error, loading 추가
+- `src/features/workspaces/queries.ts` 수정
+  - try catch 제거
+- `src/features/projects/schemas.ts` 수정
+  - updateProjectSchema 추가
+- `src/features/projects/server/route.ts` 수정
+  - project patch API 추가
+- `src/features/workspaces/components/edit-workspace-form.tsx` 수정
+  - router 관련 로직 수정
+- `src/features/workspaces/api/use-update-workspace.ts` 수정
+  - router 관련 로직 수정
+- `src/features/workspaces/api/use-reset-invite-code.ts` 수정
+  - router 관련 로직 수정
+- `src/app/(standalone)/workspaces/[workspaceId]/projects/[projectId]/settings/page.tsx` 생성
+  - 프로젝트 설정 페이지
+- `src/app/(standalone)/workspaces/[workspaceId]/settings/page.tsx` 수정
+  - 워크스페이스 설정 페이지
+- `src/features/projects/api/use-update-project.ts` 생성
+  - 프로젝트 업데이트 훅 정의
+  - react-query의 useMutation을 사용하여 프로젝트 업데이트 API 요청 처리
+- `src/features/projects/components/create-project-form.tsx` 생성
+  - 프로젝트 생성 폼 컴포넌트 추가
+- `src/features/projects/components/edit-project-form.tsx` 생성
+  - 프로젝트 업데이트 폼 컴포넌트 추가
+  - 프로젝트 업데이트, 삭제 처리
+- `src/features/projects/api/use-delete-project.ts` 생성
+  - 프로젝트 삭제 훅 정의
+  - react-query의 useMutation을 사용하여 프로젝트 삭제 API 요청 처리
+
+
 ## Building a tasks API
+
+
 ## Building a task form
 ## Building data filters
 ## Building a data table

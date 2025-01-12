@@ -177,7 +177,7 @@ const app = new Hono()
         workspaceId
       );
 
-      return c.json({ data: { id: workspaceId }})
+      return c.json({ data: { $id: workspaceId } })
     }
   )
   .post(
