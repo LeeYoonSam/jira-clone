@@ -513,6 +513,30 @@ API 훅
 
 
 ## Building a tasks API
+- `src/features/tasks/components/task-view-switcher.tsx` 생성
+  - taskViewSwitcher 컴포넌트
+  - 태스크 뷰 TabList 추가
+- `src/app/(dashboard)/workspaces/[workspaceId]/projects/[projectId]/page.tsx` 수정
+  - taskViewSwitcher 추가
+- `src/components/ui/tabs.tsx` 수정
+  - 탭 css 수정
+- AppWrite Database 추가
+  - tasks collection 생성
+    - attributes : workspaceId, name, projectId, assigneeId, dueDate, description, status
+    - settings: all user - create, read, update, delete
+- `.env.local` 수정
+  - tasks collection id 추가
+- `src/config.ts` 수정
+  - tasks collection id 추가
+- `src/features/tasks/schemas.ts` 생성
+  - createTaskSchema 스키마 추가
+- `src/features/tasks/types.ts` 생성
+  - TaskStatus enum 타입 정의
+- `src/features/tasks/server/route.ts` 생성
+  - **post:** task 생성 API 추가
+  - **get:** task 조회 API 추가
+- `src/app/api/[[...route]]/route.ts` 수정
+  - tasks route 추가
 
 
 ## Building a task form
