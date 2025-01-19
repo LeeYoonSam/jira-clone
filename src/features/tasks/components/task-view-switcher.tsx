@@ -1,9 +1,24 @@
-import { DottedSeparator } from "@/components/dotted-separator";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+"use client";
+
 import { PlusIcon } from "lucide-react";
 
+import { useCreateTaskModal } from "../hooks/use-create-task-modal";
+import { useGetTasks } from "../api/use-get-tasks";
+import { useWorkspaceId } from "@/features/workspaces/hooks/use-workspace-id";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { DottedSeparator } from "@/components/dotted-separator";
+import { Button } from "@/components/ui/button";
+
 export const TaskViewSwitcher = () => {
+  const workspaceId = useWorkspaceId();
+  const { open } = useCreateTaskModal();
+
+  const {
+    data: tasks, 
+    isLoading: isLoadingTasks 
+  } = useGetTasks({ workspaceId });
+
   return (
     <Tabs className="flex-1 w-full border rounded-lg">
       <div className="h-full flex flex-col overflow-auto p-4">
@@ -19,7 +34,7 @@ export const TaskViewSwitcher = () => {
               Calendar
             </TabsTrigger>
           </TabsList>
-          <Button size="sm" className="w-full lg:w-auto">
+          <Button onClick={open} size="sm" className="w-full lg:w-auto">
             <PlusIcon className="size-4 mr-2" />
             New
           </Button>
@@ -29,13 +44,13 @@ export const TaskViewSwitcher = () => {
         <DottedSeparator className="my-4" />
         <>
           <TabsContent value="table" className="mt-0">
-            Data table
+            {JSON.stringify(tasks)}
           </TabsContent>
           <TabsContent value="kanban" className="mt-0">
-            Data kanban
+            {JSON.stringify(tasks)}
           </TabsContent>
           <TabsContent value="calendar" className="mt-0">
-            Data calendar
+            {JSON.stringify(tasks)}
           </TabsContent>
         </>
       </div>

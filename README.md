@@ -540,6 +540,23 @@ API 훅
 
 
 ## Building a task form
+- `src/features/tasks/hooks/use-create-task-modal.ts` 생성
+  - 태스크 생성 모달 훅 추가
+- `src/features/tasks/components/create-task-modal.tsx` 생성
+  - 태스크 생성 모달 컴포넌트 추가
+- `src/app/(dashboard)/layout.tsx` 수정
+  - CreateTaskModal 컴포넌트 추가
+- `src/features/tasks/components/task-view-switcher.tsx` 수정
+  - useCreateTaskModal 훅 사용
+  - new 클릭시 태스크 생성 모달 오픈
+- `src/features/tasks/components/create-task-form-wrapper.tsx` 생성
+  - 태스크 생성 폼 랩퍼 컴포넌트
+- `src/features/tasks/components/create-task-form.tsx` 생성
+  - 태스크 생성 폼 컴포넌트
+- `src/components/date-picker.tsx` 날짜 선택 컴포넌트 생성
+  - `bun add date-fns`
+
+
 ## Building data filters
 ## Building a data table
 ## Adding task settings
