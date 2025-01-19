@@ -558,6 +558,18 @@ API 훅
 
 
 ## Building data filters
+- `src/features/tasks/api/use-get-tasks.ts` 수정
+  - 태스크 조회 API 필터 추가
+- `src/features/tasks/components/data-filters.tsx` 생성
+  - 태스크 필터 컴포넌트 추가
+  - status, assignee, project, dueDate 필터 추가
+- `src/features/tasks/components/task-view-switcher.tsx` 수정
+  - dataFilters 추가
+  - task 리스트에 필터 적용
+- `src/features/tasks/hooks/use-task-filters.ts` 생성
+  - 태스크 필터 훅 정의
+
+
 ## Building a data table
 ## Adding task settings
 ## Building a data kanban
