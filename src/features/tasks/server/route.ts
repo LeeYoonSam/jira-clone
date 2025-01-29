@@ -7,7 +7,7 @@ import { ID, Query } from "node-appwrite";
 import { createAdminClient } from "@/lib/appwrite";
 import { getMember } from "@/features/members/utils";
 import { Project } from "@/features/projects/types";
-import { TaskStatus } from "../types";
+import { Task, TaskStatus } from "../types";
 import { createTaskSchema } from "../schemas";
 
 const app = new Hono()
@@ -79,7 +79,7 @@ const app = new Hono()
         query.push(Query.equal("name", search));
       }
 
-      const tasks = await databases.listDocuments(
+      const tasks = await databases.listDocuments<Task>(
         DATABASE_ID,
         TASKS_ID,
         query,

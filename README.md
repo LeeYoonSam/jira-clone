@@ -571,6 +571,29 @@ API 훅
 
 
 ## Building a data table
+- `src/features/tasks/components/columns.tsx` 생성
+  - DataTable Columns 정의
+  - `bun add @tanstack/react-table`
+- `src/features/tasks/types.ts` 수정
+  - Task 타입 추가
+- `src/features/tasks/server/route.ts` 수정
+  - Task get API 추가
+- `src/lib/utils.ts` 수정
+  - 타이틀용 텍스트 변환 유틸 추가
+- `src/features/tasks/components/columns.tsx` 생성
+  - 테이블 컬럼 설정
+- `src/features/tasks/components/data-table.tsx` 생성
+  - 테이블 컴포넌트 구현
+- `src/features/tasks/components/task-actions.tsx` 생성
+  - 테이블 액션 추가(Task Details, Open Project, Edit Task, Delete Task)
+- `src/features/tasks/components/task-date.tsx` 추가
+  - 태스크 날짜 컴포넌트
+- `src/components/ui/badge.tsx` 수정
+  - 뱃지 컴포넌트 Status 별 variants 추가
+- `src/features/tasks/components/task-view-switcher.tsx` 수정
+  - TabList 의 Table 추가(DataTable)
+
+
 ## Adding task settings
 ## Building a data kanban
 ## Adding a kanban update API
