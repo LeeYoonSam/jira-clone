@@ -595,6 +595,36 @@ API 훅
 
 
 ## Adding task settings
+- `src/features/tasks/types.ts` Task Type 수정 
+  - workspaceId 추가
+- `src/features/tasks/server/route.ts` 수정
+  - task delete 추가
+  - task patch 추가
+  - task get 추가
+- `src/features/tasks/api/use-delete-task.ts` 생성
+  - react-query 를 사용해서 태스크 삭제 API 훅 생성
+- `src/features/tasks/components/task-actions.tsx` 수정
+  - 테이블 액션 추가
+  - Router 를 사용해서 task details, project 이동
+  - Dialog, delete hook 을 사용해서 삭제 처리
+  - EditForm, edit hook 을 사용해서 작업 업데이트 처리
+- `src/features/tasks/hooks/use-edit-task-modal.ts` 생성
+  - EditModal 에서 사용할 상태 훅 추가
+- `src/features/tasks/api/use-update-task.ts` 생성
+  - react-query 를 사용해서 태스크 업데이트 API 훅 생성
+- `src/features/tasks/components/edit-task-form.tsx` 생성
+  - EditForm 컴포넌트
+- `src/features/tasks/components/edit-task-form-wrapper.tsx` 생성
+  - EditTaskForm 랩퍼 컴포넌트
+- `src/features/tasks/components/edit-task-modal.tsx` 생성
+  - useEditTaskModal 을 사용한 모달 컴포넌트
+  - EditTaskFormWrapper 컴포넌트 추가
+- `src/features/tasks/api/use-get-task.ts` 생성
+  - react-query 를 사용해서 태스크 하나의 정보 가져오는 API 훅 생성
+- `src/app/(dashboard)/layout.tsx` 수정
+  - EditTaskModal 컴포넌트 추가
+
+
 ## Building a data kanban
 ## Adding a kanban update API
 ## Building a data calendar
