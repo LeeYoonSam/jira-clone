@@ -626,6 +626,20 @@ API 훅
 
 
 ## Building a data kanban
+- 드래그앤드롭 라이브러리 추가
+  - `bun add @hello-pangea/dnd`
+- `src/features/tasks/components/task-view-switcher.tsx` 수정
+  - DataKanban 컴포넌트 추가
+- `src/features/tasks/components/data-kanban.tsx` 생성
+  - 칸반 컴포넌트
+  - DragDropContext 추가
+  - 칸반 헤더 추가
+- src/features/tasks/components/kanban-column-header.tsx 생성
+  - 칸반 헤더 컴포넌트
+  - 태스크 상태에 따라 아이콘 지정
+  - useCreateTaskModal 을 사용해서 태스크 생성 모달 추가
+
+
 ## Adding a kanban update API
 ## Building a data calendar
 ## Adding a task page
