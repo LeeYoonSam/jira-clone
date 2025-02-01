@@ -657,6 +657,24 @@ API 훅
 
 
 ## Building a data calendar
+- 캘린더 라이브러리 추가
+  - `bun add react-big-calendar`
+  - `bun add -D @types/react-big-calendar`
+- `src/features/tasks/components/data-calendar.tsx` 생성
+  - 데이터 기반 Calendar 컴포넌트
+  - Localizer 적용
+  - `import "react-big-calendar/lib/css/react-big-calendar.css";` 캘린더 스타일 적용
+  - data-calendar.css 적용
+  - CustomToolbar 추가
+- `src/features/tasks/components/data-calendar.css` 생성
+  - 캘린더 관련 css 다수 추가
+- `src/features/tasks/components/event-card.tsx` 추가
+  - 이벤트 카드 컴포넌트
+  - status 에 따라 색상 className 추가
+- `src/features/tasks/components/task-view-switcher.tsx` 수정
+  - DataCalendar 컴포넌트 추가
+
+
 ## Adding a task page
 ## Refactoring server components 
 ## Building project analytics
