@@ -634,13 +634,28 @@ API 훅
   - 칸반 컴포넌트
   - DragDropContext 추가
   - 칸반 헤더 추가
-- src/features/tasks/components/kanban-column-header.tsx 생성
+- `src/features/tasks/components/kanban-column-header.tsx` 생성
   - 칸반 헤더 컴포넌트
   - 태스크 상태에 따라 아이콘 지정
   - useCreateTaskModal 을 사용해서 태스크 생성 모달 추가
 
 
 ## Adding a kanban update API
+- `src/features/tasks/server/route.ts` 수정
+  - bulk-update API 추가
+- `src/features/tasks/api/use-bulk-update-tasks.ts` 생성
+  - 벌크 업데이트 mutation 훅 생성
+- `src/features/tasks/components/kanban-card.tsx` 생성
+  - 칸반카드 컴포넌트
+  - 작업 정보 표시
+- `src/features/tasks/components/data-kanban.tsx` 생성
+  - 드래그앤 드롭 컴포넌트 추가
+  - KanbanCard 컴포넌트 추가
+  - 드래그앱 드롭 후 작업 업데이트 처리
+- `src/features/tasks/components/task-view-switcher.tsx` 수정
+  - onKanbanChange useCallback 추가 및 전달
+
+
 ## Building a data calendar
 ## Adding a task page
 ## Refactoring server components 
