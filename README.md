@@ -676,6 +676,37 @@ API 훅
 
 
 ## Adding a task page
+- `src/app/(dashboard)/workspaces/[workspaceId]/tasks/page.tsx` 생성
+  - MyTasks 페이지 추가
+- `src/features/tasks/components/task-view-switcher.tsx` 수정
+  - TaskViewSwitcherProps 추가
+  - DataFilters hideProjectFilter 적용
+- `src/features/tasks/components/data-filters.tsx` 수정
+  - hideProjectFilter 속성에 따라 컴포넌트 처리
+- `src/components/page-loader.tsx` 생성
+  - 공통 페이지 로더 컴포넌트 추가
+- `src/components/page-error.tsx` 생성
+  - 공통 페이지 에러 컴포넌트 추가
+- `src/app/(dashboard)/workspaces/[workspaceId]/tasks/[taskId]/page.tsx` 생성
+  - TaskId 페이지 추가
+  - TaskIdClient 컴포넌트 추가
+- `src/app/(dashboard)/workspaces/[workspaceId]/tasks/[taskId]/client.tsx` 생성
+  - TaskIdClient 컴포넌트
+  - TaskOverview 컴포넌트 추가
+  - TaskDescription 컴포넌트 추가
+- `src/features/tasks/hooks/use-task-id.ts` 생성
+  - useParams 를 사용해서 taskId 가져오는 훅
+- `src/features/tasks/components/task-breadcrumbs.tsx` 생성
+  - 작업 이동 경로 컴포넌트
+- `src/features/tasks/components/task-overview.tsx` 생성
+  - 작업 개요 컴포넌트
+- `src/features/tasks/types.ts` 수정
+  - description 추가
+- `src/features/tasks/components/task-description.tsx` 생성
+  - 작업 설명 컴포넌트
+  - Description 수정
+
+
 ## Refactoring server components 
 ## Building project analytics
 ## Building workspace analytics
