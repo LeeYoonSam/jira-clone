@@ -740,6 +740,19 @@ API 훅
 
 
 ## Building project analytics
+- src/features/projects/server/route.ts 수정
+  - analytics 조회 API 추가
+- src/features/projects/api/use-get-project-analytics.ts 생성
+  - react-query 를 사용해서 analytics 조회 API 호출 훅 생성
+- src/components/analytics.tsx 생성
+  - 통계 데이터 컴포넌트
+  - 카드 컴포넌트 추가
+- src/components/analytics-card.tsx 생성
+  - 통계 데이터 카드 컴포넌트
+- src/app/(dashboard)/workspaces/[workspaceId]/projects/[projectId]/client.tsx 수정
+  - 통계 정보 컴포넌트 추가
+
+
 ## Building workspace analytics
 ## Resolving build errors
 ## Implementing OAuth login
