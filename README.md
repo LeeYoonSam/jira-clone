@@ -707,7 +707,38 @@ API 훅
   - Description 수정
 
 
-## Refactoring server components 
+## Refactoring server components
+- `src/app/(dashboard)/workspaces/[workspaceId]/projects/[projectId]/client.tsx` 생성
+  - 프로젝트 상세 페이지 클라이언트 컴포넌트
+- `src/app/(dashboard)/workspaces/[workspaceId]/projects/[projectId]/page.tsx` 수정
+  - 기존에 구현되어있던 컴포넌트를 client 로 이동
+- `src/features/projects/hooks/use-project-id.ts` 생성
+  - useParams 훅으로 projectId 가져오기
+- `src/features/projects/server/route.ts` 수정
+  - get API 추가 - `/:projectId`
+- `src/features/projects/api/use-get-project.ts` 생성
+  - Project 조회 훅 추가
+- `src/app/(standalone)/workspaces/[workspaceId]/projects/[projectId]/settings/client.tsx` 생성
+  - Settings 페이지 클라이언트 컴포넌트
+- `src/app/(standalone)/workspaces/[workspaceId]/projects/[projectId]/settings/page.tsx` 수정
+  - Settings 페이지 클라이언트 컴포넌트 추가
+- src/features/projects/components/edit-project-form.tsx 수정
+  - 프로젝트 수정시 title 인풋은 변경되지 않아서 form.reset 제거
+- `src/features/projects/queries.ts` 삭제
+  - api/useGetProject 로 사용해서 더이상 필요하지 않음
+- `src/features/workspaces/server/route.ts` 수정
+  - get API 추가 - `/:workspaceId`
+- `src/features/workspaces/api/use-get-workspace.ts` 생성
+  - Workspace 조회 훅 추가
+- `src/features/workspaces/queries.ts` 수정
+  - getWorkspaceInfo, getWorkspace 제거
+- `router.refresh()` 제거
+  - src/features/workspaces/api/use-update-workspace.ts
+  - src/features/workspaces/api/use-reset-invite-code.ts
+  - src/features/tasks/api/use-update-task.ts
+  - src/features/tasks/api/use-delete-task.ts
+
+
 ## Building project analytics
 ## Building workspace analytics
 ## Resolving build errors
