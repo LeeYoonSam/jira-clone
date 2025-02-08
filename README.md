@@ -740,20 +740,47 @@ API 훅
 
 
 ## Building project analytics
-- src/features/projects/server/route.ts 수정
+- `src/features/projects/server/route.ts` 수정
   - analytics 조회 API 추가
-- src/features/projects/api/use-get-project-analytics.ts 생성
+- `src/features/projects/api/use-get-project-analytics.ts` 생성
   - react-query 를 사용해서 analytics 조회 API 호출 훅 생성
-- src/components/analytics.tsx 생성
+- `src/components/analytics.tsx` 생성
   - 통계 데이터 컴포넌트
   - 카드 컴포넌트 추가
-- src/components/analytics-card.tsx 생성
+- `src/components/analytics-card.tsx` 생성
   - 통계 데이터 카드 컴포넌트
-- src/app/(dashboard)/workspaces/[workspaceId]/projects/[projectId]/client.tsx 수정
+- `src/app/(dashboard)/workspaces/[workspaceId]/projects/[projectId]/client.tsx` 수정
   - 통계 정보 컴포넌트 추가
 
 
 ## Building workspace analytics
+- `src/app/(dashboard)/workspaces/[workspaceId]/page.tsx` 수정
+  - WorkspaceIdClient 컴포넌트 추가
+- `src/app/(dashboard)/workspaces/[workspaceId]/client.tsx` 생성
+  - WorkspaceIdClient 컴포넌트
+  - 컴포넌트 추가 
+    - Analytics
+    - TaskList
+    - ProjectList
+    - MemberList
+- `src/features/workspaces/server/route.ts` 수정
+  - **workspaceId/analytics** Get API 추가
+- `src/features/workspaces/api/use-get-workspace-analytics.ts` 생성
+  - react-query 를 사용해서 analytics 조회 API 호출 훅 생성
+- `src/features/members/types.ts` 수정
+  - Member Type 추가
+- `src/features/members/server/route.ts` 수정
+  - member 조회 API Member Type 추가
+
+
+### Note
+**ul, li 에서 데이터가 없을때 표시 방법**
+```tsx
+<li className="text-sm text-muted-foreground text-center hidden first-of-type:block">
+  No tasks found
+</li>
+```
+
 ## Resolving build errors
 ## Implementing OAuth login
 ## Deployment
