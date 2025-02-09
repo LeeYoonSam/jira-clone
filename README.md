@@ -845,3 +845,15 @@ API 훅
 
 
 ## Resolving leftover bugs
+- 태스크 추가, 삭제, 변경시 analytics 즉시 반영 되도록 수정
+  - invalidateQueries 추가 
+    - `project-analytics`
+    - `workspace-analytics`
+  - `src/features/tasks/api/use-update-task.ts`
+  - `src/features/tasks/api/use-delete-task.ts`
+  - `src/features/tasks/api/use-create-task.ts`
+  - `src/features/tasks/api/use-bulk-update-tasks.ts`
+- `src/features/auth/api/use-logout.ts` 수정
+  - 로그아웃시 invalidateQueries 로 모든 Query 업데이트
+- `src/features/workspaces/api/use-create-workspace.ts` 수정
+  - 워크스페이스 생성 후 새로고침 하도록 router refresh 추가
