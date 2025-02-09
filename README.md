@@ -830,4 +830,18 @@ API 훅
 
 
 ## Deployment
+### Vercel 배포
+- GitHub 코드 푸시
+- Vercel 에서 GitHub 에 올린 Repository 선택
+- .env 복사 후 Environment Variants 추가
+- Vercel 배포
+- 배포후에 생성된 도메인으로 각 OAuth(GitHub, Google) origins URIs 추가
+  - ex) http://localhost:3000
+- [AppWrite Integrations](https://cloud.appwrite.io/console/project-675ce521002b5732393e/overview/platforms) 추가
+  - Add platform > Web app
+    - Name: Production
+    - Hostname: *.vercel.app
+    - Next > Skip optional steps
+
+
 ## Resolving leftover bugs
