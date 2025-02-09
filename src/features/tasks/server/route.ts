@@ -88,27 +88,22 @@ const app = new Hono()
       ];
       
       if (projectId) {
-        console.log("projectId: ", projectId);
         query.push(Query.equal("projectId", projectId));
       }
 
       if (status) {
-        console.log("status: ", status);
         query.push(Query.equal("status", status));
       }
 
       if (assigneeId) {
-        console.log("assigneeId: ", assigneeId);
         query.push(Query.equal("assigneeId", assigneeId));
       }
 
       if (dueDate) {
-        console.log("dueDate: ", dueDate);
         query.push(Query.equal("dueDate", dueDate));
       }
 
       if (search) {
-        console.log("search: ", search);
         query.push(Query.equal("name", search));
       }
 
@@ -365,6 +360,10 @@ const app = new Hono()
       }
 
       const workspaceId = workspaceIds.values().next().value;
+
+      if (!workspaceId) {
+        return c.json({ error: "Workspace ID is required" }, 400);
+      }
 
       const member = await getMember({
         databases,

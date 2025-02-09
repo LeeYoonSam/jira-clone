@@ -782,6 +782,16 @@ API 훅
 ```
 
 ## Resolving build errors
+- `src/features/tasks/components/task-view-switcher.tsx` 수정
+  - useGetTasks 으로 태스크 목록을 가져올때 projectId 와 일치하는 태스크만 보이도록 수정
+- `src/components/navbar.tsx` 수정
+  - NavBar 컴포넌트에서 pathname 에 따라 Home, My Task, Projects 타이틀 변경 되도록 수정
+- `src/features/projects/components/edit-project-form.tsx` 수정
+  - isDeletingProject 사용하도록 수정
+- src/features/tasks/server/route.ts 수정
+  - **bulk-update** workspaceId 예외처리
+
+
 ## Implementing OAuth login
 ## Deployment
 ## Resolving leftover bugs
