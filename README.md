@@ -793,5 +793,41 @@ API 훅
 
 
 ## Implementing OAuth login
+- `GitHub OAuth` 생성
+  - GitHub > Settings > Developer settings > OAuth Apps > New OAuth App
+  - Client ID, Client secrets 생성 후 Appwrite 에 GitHub OAuth 정보 등록
+  - `Appwrite.io Auth` 설정
+    - Auth > Settings > OAuth2 Providers > GitHub - enabled
+    - App ID, App Secret 설정 후 Update
+- `Server-side authentication with Next.js`
+  - [OAuth authentication with SSR](https://appwrite.io/docs/tutorials/nextjs-ssr-auth/step-7)
+- `src/lib/oauth.ts` 생성
+  - AppWrite createOAuth2Token 생성 및 리다이렉트 처리
+  - `signUpWithGithub` 추가
+  - `signUpWithGoogle` 추가
+- `src/app/oauth/route.ts` 생성
+  - 세션 및 쿠키(AUTH_COOKIE) 생성
+- `Google OAuth` 생성
+  - [Google Cloud](https://cloud.google.com/?_gl=1*1xuwdp8*_up*MQ..&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4o5bD8h6CYL9QiKHvUbnvmG7aGU8Fq4Tnfkwe2765QBjXed7UgFEcRoCMgQQAvD_BwE&gclsrc=aw.ds) > 콘솔 이동
+  - 콘솔 > 새 프로젝트 > 프로젝트 생성
+  - 콘솔 > apis 검색 > APIs & Services 선택
+  - OAuth 동의 화면 > User Type - External > Create
+    - 앱 등록 수정 - 앱 정보 작성
+      - 앱 이름, 사용자 지원 이메일
+      - 개발자 연락처 정보 > 이메일 입력
+  - 사용자 인증 정보 > 사용자 인증 정보 만들기 > OAuth 클라이언트 ID 만들기
+    - 웹 어플리케이션
+    - 승인된 자바스크립트 원본 추가
+      - `http://localhost:3000`
+    - 승인된 리디렉션 URI
+      - appwrite 에서 활성화 시킨 Google OAuth2 Settings URI 추가
+    - `Appwrite.io Auth` 설정
+      - Auth > Settings > OAuth2 Providers > Google - enabled
+      - App ID, App Secret 설정 후 Update
+- `src/features/auth/components/sign-in-card.tsx` 수정
+  - GitHub(signUpWithGithub) 클릭 연결
+  - Google(signUpWithGoogle) 클릭 연결
+
+
 ## Deployment
 ## Resolving leftover bugs
